@@ -3,113 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L'ESSENCE | 오감을 깨우는 향기</title>
+    <title>LABORATORY | Hand-Blended Perfumes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <style>
-        body { font-family: 'Noto Sans KR', sans-serif; background-color: #F9F8F6; color: #2C2C2C; }
-        .font-serif { font-family: 'Libre Baskerville', serif; }
-        .nav-blur { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
-        .product-card:hover img { transform: scale(1.05); }
+        :root {
+            --le-labo-beige: #E8E4E1;
+            --le-labo-dark: #231F20;
+            --le-labo-gray: #706F6F;
+        }
+        body { 
+            font-family: 'IBM Plex Mono', 'Courier Prime', monospace; 
+            background-color: var(--le-labo-beige); 
+            color: var(--le-labo-dark);
+            -webkit-font-smoothing: antialiased;
+        }
+        .typewriter { font-family: 'Courier Prime', monospace; }
+        .label-border { border: 1px solid #C0BCB9; }
+        .btn-black { 
+            background-color: var(--le-labo-dark); 
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-black:hover {
+            background-color: transparent;
+            color: var(--le-labo-dark);
+            border: 1px solid var(--le-labo-dark);
+        }
+        /* 실험실 느낌의 그리드 배경 */
+        .bg-grid {
+            background-image: radial-gradient(#C0BCB9 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+        }
     </style>
 </head>
-<body>
+<body class="bg-grid">
 
-    <nav class="fixed w-full z-50 px-6 py-5 flex justify-between items-center nav-blur border-b border-stone-100">
-        <div class="hidden md:flex space-x-8 text-[11px] tracking-[0.2em] uppercase">
-            <a href="#" class="hover:opacity-50 transition">Shop</a>
-            <a href="#" class="hover:opacity-50 transition">Our Story</a>
-        </div>
-        
-        <h1 class="text-2xl font-serif tracking-[0.3em] font-light italic">L'ESSENCE</h1>
-        
-        <div class="flex items-center space-x-5">
-            <i data-lucide="search" class="w-5 h-5 cursor-pointer hover:opacity-50"></i>
-            <i data-lucide="shopping-bag" class="w-5 h-5 cursor-pointer hover:opacity-50"></i>
-        </div>
-    </nav>
-
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?auto=format&fit=crop&q=80&w=2000" 
-                 class="w-full h-full object-cover brightness-75" alt="Main Visual">
-        </div>
-        <div class="relative z-10 text-center text-white" data-aos="fade-up" data-aos-duration="1500">
-            <p class="text-[10px] tracking-[0.5em] uppercase mb-6">Eau de Parfum Collection</p>
-            <h2 class="text-5xl md:text-7xl font-serif font-light mb-10 italic">Eternal Moment</h2>
-            <button class="px-12 py-4 border border-white/50 text-[11px] tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all duration-500">
-                Explore Scents
-            </button>
-        </div>
-    </section>
-
-    <section class="py-32 px-6 text-center" data-aos="fade-up">
-        <div class="max-w-3xl mx-auto">
-            <h3 class="text-2xl md:text-3xl font-serif font-light leading-relaxed italic mb-8">
-                "우리는 보이지 않는 옷을 만듭니다."
-            </h3>
-            <p class="text-sm text-stone-500 leading-loose font-light break-keep">
-                에센스는 가장 순수한 원료를 찾아 전 세계를 여행합니다. <br>
-                당신의 일상에 스며들어 가장 개인적인 기억이 될 향기를 선사합니다.
-            </p>
-        </div>
-    </section>
-
-    <section class="max-w-7xl mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-            
-            <div class="product-card group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                <div class="aspect-[3/4] overflow-hidden bg-stone-100 mb-6">
-                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800" 
-                         class="w-full h-full object-cover transition-transform duration-700" alt="Perfume 1">
-                </div>
-                <div class="text-center">
-                    <h4 class="text-lg font-serif italic mb-1">Noir 29</h4>
-                    <p class="text-[11px] tracking-widest text-stone-400 uppercase mb-3">Woody / Tea</p>
-                    <p class="text-sm font-medium">₩310,000</p>
+    <header class="border-b border-stone-300 bg-[#E8E4E1]/90 backdrop-blur-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex gap-8 text-[10px] uppercase tracking-tighter font-semibold">
+                <a href="#" class="hover:underline">Fine Fragrances</a>
+                <a href="#" class="hover:underline md:block hidden">Home Creations</a>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tighter typewriter uppercase italic">LABORATORY</h1>
+            <div class="flex gap-6 items-center">
+                <i data-lucide="search" class="w-4 h-4 cursor-pointer"></i>
+                <i data-lucide="user" class="w-4 h-4 cursor-pointer md:block hidden"></i>
+                <div class="flex items-center gap-1 cursor-pointer">
+                    <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                    <span class="text-[10px] font-bold">(0)</span>
                 </div>
             </div>
-
-            <div class="product-card group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
-                <div class="aspect-[3/4] overflow-hidden bg-stone-100 mb-6">
-                    <img src="https://images.unsplash.com/photo-1557170334-a7c3c40d002d?auto=format&fit=crop&q=80&w=800" 
-                         class="w-full h-full object-cover transition-transform duration-700" alt="Perfume 2">
-                </div>
-                <div class="text-center">
-                    <h4 class="text-lg font-serif italic mb-1">Rose 31</h4>
-                    <p class="text-[11px] tracking-widest text-stone-400 uppercase mb-3">Floral / Spicy</p>
-                    <p class="text-sm font-medium">₩285,000</p>
-                </div>
-            </div>
-
-            <div class="product-card group cursor-pointer" data-aos="fade-up" data-aos-delay="500">
-                <div class="aspect-[3/4] overflow-hidden bg-stone-100 mb-6">
-                    <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800" 
-                         class="w-full h-full object-cover transition-transform duration-700" alt="Perfume 3">
-                </div>
-                <div class="text-center">
-                    <h4 class="text-lg font-serif italic mb-1">Bergamote 22</h4>
-                    <p class="text-[11px] tracking-widest text-stone-400 uppercase mb-3">Citrus / Fresh</p>
-                    <p class="text-sm font-medium">₩290,000</p>
-                </div>
-            </div>
-
         </div>
-    </section>
+    </header>
 
-    <footer class="py-20 border-t border-stone-200 text-center">
-        <p class="text-[10px] tracking-[0.3em] text-stone-400 uppercase">
-            © 2026 L'ESSENCE PERFUMERY. Crafted with Elegance.
-        </p>
+    <main class="pt-24">
+        <section class="px-6 py-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1" data-aos="fade-right">
+                <span class="text-[11px] uppercase tracking-widest text-stone-500 mb-4 block underline decoration-1 underline-offset-4">Fresh Discovery</span>
+                <h2 class="text-4xl md:text-6xl font-bold typewriter mb-8 leading-tight tracking-tighter">SANTAL 33 <br>EAU DE PARFUM</h2>
+                <p class="text-sm leading-relaxed mb-10 text-stone-600 max-w-md">
+                    사용자의 피부 위에서 완성되는 향기. <br>
+                    카다멈, 아이리스, 바이올렛의 조화가 만들어내는 연기 나는 샌달우드 향의 정수. 실험실에서 갓 블렌딩된 신선함을 경험하세요.
+                </p>
+                <div class="flex gap-4">
+                    <button class="btn-black px-8 py-3 text-[11px] font-bold uppercase tracking-widest">Add to Cart</button>
+                    <button class="border border-stone-400 px-8 py-3 text-[11px] font-bold uppercase tracking-widest hover:bg-stone-200 transition">Sample</button>
+                </div>
+            </div>
+            <div class="order-1 md:order-2">
+                <div class="p-8 bg-white label-border shadow-sm relative group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=1000" 
+                         alt="Perfume Bottle" class="w-full h-auto grayscale group-hover:grayscale-0 transition duration-700">
+                    <div class="absolute bottom-4 right-4 text-[10px] text-stone-400 typewriter italic">Ref: 33-02-26</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-t border-stone-300 mt-20">
+            <div class="max-w-7xl mx-auto px-6 py-20">
+                <div class="flex justify-between items-end mb-16 border-l-4 border-black pl-4">
+                    <h3 class="text-xl font-bold typewriter uppercase">The Classics</h3>
+                    <span class="text-[10px] font-medium underline cursor-pointer">View all 18 creations</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-300 border border-stone-300">
+                    <div class="bg-[#E8E4E1] p-8 hover:bg-white transition-colors cursor-pointer group">
+                        <div class="aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1588405864443-f111dad66c72?auto=format&fit=crop&q=80&w=500" 
+                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        </div>
+                        <h4 class="text-sm font-bold typewriter uppercase">Another 13</h4>
+                        <p class="text-[10px] text-stone-500 mb-4 mt-1">Musky / Ambrette</p>
+                        <div class="pt-4 border-t border-stone-200 flex justify-between items-center">
+                            <span class="text-xs font-bold">₩310,000</span>
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#E8E4E1] p-8 hover:bg-white transition-colors cursor-pointer group border-l border-stone-300">
+                        <div class="aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1557170334-a7c3c40d002d?auto=format&fit=crop&q=80&w=500" 
+                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        </div>
+                        <h4 class="text-sm font-bold typewriter uppercase">Rose 31</h4>
+                        <p class="text-[10px] text-stone-500 mb-4 mt-1">Spicy / Floral</p>
+                        <div class="pt-4 border-t border-stone-200 flex justify-between items-center">
+                            <span class="text-xs font-bold">₩280,000</span>
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#E8E4E1] p-8 hover:bg-white transition-colors cursor-pointer group border-l border-stone-300">
+                        <div class="aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=500" 
+                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        </div>
+                        <h4 class="text-sm font-bold typewriter uppercase">Bergamote 22</h4>
+                        <p class="text-[10px] text-stone-500 mb-4 mt-1">Fresh / Citrus</p>
+                        <div class="pt-4 border-t border-stone-200 flex justify-between items-center">
+                            <span class="text-xs font-bold">₩310,000</span>
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#E8E4E1] p-8 hover:bg-white transition-colors cursor-pointer group border-l border-stone-300">
+                        <div class="aspect-square mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1605839334365-99c581298471?auto=format&fit=crop&q=80&w=500" 
+                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500">
+                        </div>
+                        <h4 class="text-sm font-bold typewriter uppercase">The Noir 29</h4>
+                        <p class="text-[10px] text-stone-500 mb-4 mt-1">Black Tea / Fig</p>
+                        <div class="pt-4 border-t border-stone-200 flex justify-between items-center">
+                            <span class="text-xs font-bold">₩310,000</span>
+                            <i data-lucide="plus" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-32 px-6 border-t border-stone-300">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-[10px] font-bold uppercase tracking-[0.5em] text-stone-500 mb-12 block">Our Manifesto</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-loose typewriter uppercase italic">
+                    <p>We believe that there are too many bottles of perfume and not enough soulful fragrances.</p>
+                    <p>We believe the soul of a fragrance comes from the intention with which it is created and the attention with which it is prepared.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <p class="text-[10px] tracking-widest font-bold uppercase">© 2026 Laboratory Perfumery. Hand-blended for you.</p>
+            <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest">
+                <a href="#">Contact</a>
+                <a href="#">Stockists</a>
+                <a href="#">Shipping</a>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // 초기화
-        AOS.init({ once: true });
         lucide.createIcons();
     </script>
 </body>
